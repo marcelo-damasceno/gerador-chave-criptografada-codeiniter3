@@ -15,7 +15,6 @@ class Welcome extends CI_Controller {
 		$dados['chave'] = bin2hex($this->encryption->create_key(16));
 		$dados['senha'] = 'Abc@1234';
 		$dados['senha_encriptada'] = password_hash($dados['senha'],PASSWORD_DEFAULT);
-		$this->load->view('welcome_message', $dados);
-		
+		$this->load->view('welcome_message', $dados);	
 	}
 }
